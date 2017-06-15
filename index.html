@@ -8,19 +8,21 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400i" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick.css"/>
+    <link rel="stylesheet" href="css/slick-theme.css"/>
 </head>
 
 <body>
     <header>
-        <div class="container">
+        <div class="container clearfix">
 
-            <a href="#!">
+            <a href="#!" class="header-logo">
                 <img src="../img/logo.png" alt="Логотип"/>
             </a>
 
             <nav>
                 <span class="menu-icon"></span>
-                <ul>
+                <ul class="clearfix">
                     <li>
                         <a href="#!">Home</a>
                     </li>
@@ -45,7 +47,25 @@
         </div>
     </header>
 
-    <section class="slider"></section>
+    <section class="slider">
+        <div class="single-item">
+            <div class="slider-item">
+                <img src="../img/slider-img.jpg" alt=""/>
+                <div class="slider-description">
+                    <h1>This is a main heading</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing</p>
+                    <a href="#!" class="slider-item-button">Learn More</a>
+                </div>
+            </div>
+            <div>
+                <img src="../img/slider-img.jpg" alt=""/>
+            </div>
+            <div>
+                <img src="../img/slider-img.jpg" alt=""/>
+            </div>
+        </div>
+
+    </section>
 
     <section class="team">
         <div class="container">
@@ -132,7 +152,7 @@
                         <p>lacus pulvinarvel </p>
                         <p>Prnare nisi pretium</p>
 
-                        <button class="item-buy">Buy now</button>
+                        <button class="item-buy" type="submit">Buy now</button>
                     </div>
                 </div>
 
@@ -169,10 +189,10 @@
                             Lorem Ipsum has been the industry's
                         </p>
 
-                        <ul class="footer-social-net">
-                            <li class="social-icon"><a href=""></a></li>
-                            <li class="social-icon"><a href=""></a></li>
-                            <li class="social-icon"><a href=""></a></li>
+                        <ul class="footer-social-net clearfix">
+                            <li class="social-icon facebook"><a href=""></a></li>
+                            <li class="social-icon twitter"><a href=""></a></li>
+                            <li class="social-icon google"><a href=""></a></li>
                         </ul>
                         <p>Posted by Dospel & GanjaParker</p>
 
@@ -185,10 +205,10 @@
                 </div>
 
                 <div class="col xl6 l6 m12 s12">
-                    <form action="">
+                    <form action="" class="clearfix">
                         <div class="clearfix">
-                            <input type="text" placeholder="Name">
                             <input type="email" placeholder="Email">
+                            <input type="text" placeholder="Name">
                         </div>
                         <textarea  id="" cols="30" rows="10" placeholder="Message "></textarea>
                         <button type="submit">Send</button>
@@ -197,5 +217,11 @@
             </div>
         </div>
     </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+
+    <script type="text/javascript" src="js/myJs.js"></script>
 </body>
 </html>

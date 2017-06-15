@@ -11,11 +11,13 @@
   box-sizing: border-box;
 }
 
-/*ul li {
-  list-style: none;
-  display: inline-block;
-  float: left;
-}*/
+ul {
+  li {
+    list-style: none;
+    display: inline-block;
+    float: left;
+  }
+}
 
 a {
   text-decoration: none
@@ -115,12 +117,6 @@ header, footer, section, article, nav {
 .col.xl10 {width: 83.33333333333333%;}
 .col.xl11 {width: 91.66666666666667%;}
 .col.xl12 {width: 100%;}*/
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
 
 @media only screen and (min-width: 601px) {
   .container {
@@ -236,5 +232,10 @@ header, footer, section, article, nav {
       @extend .l1;
       width: 100%;
     }
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
   }
 }

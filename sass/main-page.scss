@@ -1,0 +1,176 @@
+.slider {
+  //position: relative;
+  background-color: #49cbcd;
+
+  img {
+    width: 100%;
+    height: auto;
+
+    opacity: .5;
+  }
+  .slick-prev {
+    left: 25px;
+    z-index: 10;
+  }
+  .slick-next {
+    right: 25px;
+  }
+
+  .slider-description {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+
+    text-align: center;
+    color: #fff;
+  }
+  .slider-item-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    color: #fff;
+  }
+}
+
+.team {
+  padding-top: 5%;
+  padding-bottom: 5%;
+
+  text-align: center;
+  color: #4e525d;
+  .team-title {
+    margin-bottom: 5%;
+  }
+  .co-worker-foto {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15%;
+
+    width: 201px;
+    height: 201px;
+
+    background-color: #eeeef0;
+    border-radius: 50%;
+  }
+  .co-worker-about {
+    margin-top: 5%;
+  }
+}
+
+.tariff-plans {
+  padding-top: 5%;
+  padding-bottom: 5%;
+
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.tariff-plans-item {
+  background-color: #f8f9fb;
+  border: 1px solid #ecf0f1;
+  .item-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    color: #fff;
+    background-color: #485460;
+  }
+  .item-coast {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    color: #485460;
+  }
+  p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    color: #8c9299;
+    background-color: #fff;
+    border-bottom: 1px solid #ecf0f1;
+  }
+  .item-buy {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 10px 50px;
+
+    color: #fff;
+    background-color: #8c9299;
+    border-radius: 5px;
+  }
+}
+
+footer {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background: url("footer-backgr.jpg") center no-repeat;
+  background-size: cover;
+
+  form {
+    input, textarea {
+      padding: 15px 0 15px 20px;
+      margin-bottom: 30px;
+    }
+    input, textarea, button {
+      float: right;
+      border-radius: 5px;
+    }
+    input {
+      width: 48%;
+      &:nth-child(2) {
+        margin-right: 4%;
+      }
+    }
+    textarea {
+      width: 100%;
+    }
+    button {
+      //display: block;
+      padding: 15px 50px;
+      color: #fff;
+      background-color: #49cbcd;
+    }
+  }
+}
+.footer-title {
+  //padding-top: 5%;
+  margin-bottom: 5%;
+
+  text-align: center;
+  color: #fff;
+}
+.footer-contact {
+  h5 {
+    color: #fff;
+  }
+  color: #909090;
+}
+.footer-contact-tel, .footer-contact-mail {
+  display: block;
+  color: #bface2;
+}
+.footer-social-net {
+  .social-icon {
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+
+    border-radius: 50%;
+  }
+  .facebook {
+    background-color: #3b5997;
+  }
+  .twitter {
+    background-color: #3ec2f3;
+  }
+  .google {
+    background-color: #e44c41;
+  }
+}
+

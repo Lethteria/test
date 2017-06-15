@@ -1,51 +1,13 @@
 ﻿$(document).ready(function() {
-    $(".fancybox").fancybox();
-    $(".slider").not('.slick-initialized').slick({
-        dots: true,
+    $('.single-item').slick({
         infinite: true,
-        speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
     });
-    //---------back-to-top-----//
-    var pos = $('#header').find('.header-title').offset().top;
-    $(window).scroll(function(){
-        if ($(window).scrollTop() >= pos){
-            $('#back-to-top').addClass('show');
-        } else {
-            $('#back-to-top').removeClass('show');
-        }
-    });
+
     //----------Плавный переход по ссылкам------------//
-    $('#back-to-top').click(function(){
-        $('html, body').animate({scrollTop: 0},500);
-    });
-    $('#menu').find('.navbar-nav a').click(function(e){
+    /*$('#menu').find('.navbar-nav a').click(function(e){
         e.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
@@ -68,14 +30,8 @@
             }, 500);
         }
     });
-    //------------product-foto hover----------//
-    $('.product-item').hover(function(){
-        $('img',this).toggleClass('img-scale');
-    });
-    //----------map active-----------//
-    $('#our-contact').find('.map-not-active').click(function(){
-        $(this).addClass('map-active');
-    });
+
+
     //----------menu------------//
     $('#gamburger').click(function(){
         var $this = $(this);
@@ -113,5 +69,5 @@
             }
 
         }
-    });
+    });*/
 });
