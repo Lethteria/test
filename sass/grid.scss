@@ -2,9 +2,9 @@
   margin: 0;
   padding: 0;
   font-weight: inherit;
-  font-family: inherit;
+  //font-family: inherit;
   font-style: inherit;
-  font-size: 100%;
+  //font-size: 100%;
   border: 0 none;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -32,6 +32,41 @@ header, footer, section, article, nav {
   display: block;
 }
 
+@font-face {
+  font-family: 'Open-sans Regular';
+  src: url('../fonts/OpenSans/opensans-regular.woff2') format('woff2'),
+  url('../fonts/OpenSans/opensans-regular.woff') format('woff'),
+  url('../fonts/OpenSans/OpenSans-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open-sans Semibold';
+  src: url('../fonts/OpenSans/opensans-semibold.woff2') format('woff2'),
+  url('../fonts/OpenSans/opensans-semibold.woff') format('woff'),
+  url('../fonts/OpenSans/OpenSans-Semibold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MyriadPro Regular';
+  src: url('../fonts/MyriadPro/MyriadPro-Regular.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello/fontello.eot') format('eot'),
+  url('../fonts/fontello/fontello.woff2') format('woff2'),
+  url('../fonts/fontello/fontello.woff') format('woff'),
+  url('../fonts/fontello/fontello.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'Open-sans Regular';
+  font-size: 14px;
+}
 /*---------------------------С------------------*/
 .clearfix, .row {
   &:after  {

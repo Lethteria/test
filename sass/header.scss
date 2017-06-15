@@ -1,16 +1,35 @@
 header {
-  padding-top: 25px;
+  //padding-top: 25px;
+  position: fixed;
+  width: 100%;
+  top: 0;
   background-color: #fff;
+  z-index: 10;
 }
 .header-logo {
   float: left;
+  line-height: 100px;
+  img {
+    vertical-align: middle;
+  }
 }
 nav {
   float: right;
+  font-size: 15px;
   li {
-    padding: 0 20px;
+    padding: 40px 20px;
+    &:hover {
+      cursor: pointer;
+      background-color: #f8f9fb;
+      transition: color 2s ease-out;
+    }
+    &:hover a {
+      color: #49cbcd;
+      transition: color 0.5s ease-out;
+    }
     a {
       color: #484c55;
+      transition: color 0.5s ease-out;
     }
   }
 }

@@ -1,0 +1,117 @@
+$aquamarine-color: #49cbcd;
+footer {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background: url("footer-backgr.jpg") center no-repeat;
+  background-size: cover;
+
+  form {
+    input, textarea {
+      padding: 15px 0 15px 20px;
+      margin-bottom: 30px;
+      font-size: 16px;
+      color: #c1c1c1;
+    }
+    input, textarea, button {
+      float: right;
+      font-family: 'Open-sans Regular';
+      border-radius: 5px;
+    }
+    input {
+      width: 48%;
+      &:nth-child(2) {
+        margin-right: 4%;
+      }
+    }
+    textarea {
+      width: 100%;
+    }
+    button {
+      //display: block;
+      padding: 15px 50px;
+      font-size: 22px;
+      color: #fff;
+      background-color: $aquamarine-color;
+
+      transition: all 0.5s ease-out;
+      &:hover {
+        cursor: pointer;
+        color: $aquamarine-color;
+        background-color: #fff;
+        transition: all 0.5s ease-out;
+      }
+    }
+  }
+}
+.footer-title {
+  //padding-top: 5%;
+  margin-bottom: 7%;
+
+  text-align: center;
+  font-size: 42px;
+  color: #fff;
+}
+.footer-contact {
+  h5 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #fff;
+  }
+  h5+p {
+    width: 80%;
+  }
+  color: #909090;
+}
+.footer-contact-tel, .footer-contact-mail {
+  display: block;
+  font-family: 'MyriadPro Regular';
+  color: #bface2;
+}
+.footer-social-net {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  .social-icon {
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+
+    border-radius: 50%;
+
+    a {
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+
+      text-align: center;
+      &:before {
+        font-family: 'fontello';
+        display: inline-block;
+
+        font-size: 20px;
+        line-height: 45px;
+        font-variant: normal;
+        text-transform: none;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .facebook {
+    background-color: #3b5997;
+    a:before {
+      content: '\e802';
+    }
+  }
+  .twitter {
+    background-color: #3ec2f3;
+    a:before {
+      content: '\e800';
+    }
+  }
+  .google {
+    background-color: #e44c41;
+    a:before {
+      content: '\e801';
+    }
+  }
+}

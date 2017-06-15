@@ -1,6 +1,8 @@
+$aquamarine-color: #49cbcd;
 .slider {
-  //position: relative;
-  background-color: #49cbcd;
+  padding-top: 100px;
+  position: relative;
+  background-color: $aquamarine-color;
 
   img {
     width: 100%;
@@ -23,19 +25,45 @@
     left: 0;
     bottom: 0;
 
-    width: 50%;
+    width: 75%;
     height: 50%;
     margin: 0 auto;
 
     text-align: center;
     color: #fff;
+
+    .item-title {
+      margin-bottom: 20px;
+
+      font-family: 'Open-sans Semibold';
+      font-size: 63px;
+    }
+    p {
+      width: 50%;
+      margin: 0 auto 50px;
+      font-size: 23px;
+    }
+    .slider-item-button {
+      font-family: 'Open-sans Semibold';
+      font-size: 26px;
+    }
   }
   .slider-item-button {
     display: inline-block;
     padding: 10px 20px;
+
     border: 2px solid #ffffff;
     border-radius: 5px;
     color: #fff;
+
+    transition: all 1s ease-out;
+    &:hover {
+      color: darken($aquamarine-color,25%);
+      border-color: darken($aquamarine-color,25%);
+      //background-color: #fff;
+
+      transition: all 1s ease-out;
+    }
   }
 }
 
@@ -46,7 +74,8 @@
   text-align: center;
   color: #4e525d;
   .team-title {
-    margin-bottom: 5%;
+    margin-bottom: 10%;
+    font-size: 42px;
   }
   .co-worker-foto {
     margin-left: auto;
@@ -58,6 +87,12 @@
 
     background-color: #eeeef0;
     border-radius: 50%;
+  }
+  .co-worker-name {
+    font-size: 22px;
+  }
+  .co-worker-profession {
+    //font-size: 14px;
   }
   .co-worker-about {
     margin-top: 5%;
@@ -78,6 +113,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
 
+    font-size: 26px;
     color: #fff;
     background-color: #485460;
   }
@@ -85,6 +121,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
 
+    font-size: 20px;
     color: #485460;
   }
   p {
@@ -100,77 +137,28 @@
     margin-bottom: 25px;
     padding: 10px 50px;
 
+    font-family: 'Open-sans Semibold';
+    font-size: 17px;
+
     color: #fff;
     background-color: #8c9299;
     border-radius: 5px;
-  }
-}
-
-footer {
-  padding-top: 5%;
-  padding-bottom: 5%;
-  background: url("footer-backgr.jpg") center no-repeat;
-  background-size: cover;
-
-  form {
-    input, textarea {
-      padding: 15px 0 15px 20px;
-      margin-bottom: 30px;
+    transition:  background-color 0.5s ease-out;
+    &:hover {
+      cursor: pointer;
+      background-color: $aquamarine-color;
+      transition:  background-color 0.5s ease-out;
     }
-    input, textarea, button {
-      float: right;
-      border-radius: 5px;
-    }
-    input {
-      width: 48%;
-      &:nth-child(2) {
-        margin-right: 4%;
+    .tariff-hover {
+      transition:  background-color 0.5s ease-out;
+      &:hover {
+        cursor: pointer;
+        background-color: $aquamarine-color;
+        transition:  background-color 0.5s ease-out;
       }
     }
-    textarea {
-      width: 100%;
-    }
-    button {
-      //display: block;
-      padding: 15px 50px;
-      color: #fff;
-      background-color: #49cbcd;
-    }
   }
 }
-.footer-title {
-  //padding-top: 5%;
-  margin-bottom: 5%;
 
-  text-align: center;
-  color: #fff;
-}
-.footer-contact {
-  h5 {
-    color: #fff;
-  }
-  color: #909090;
-}
-.footer-contact-tel, .footer-contact-mail {
-  display: block;
-  color: #bface2;
-}
-.footer-social-net {
-  .social-icon {
-    width: 45px;
-    height: 45px;
-    margin-right: 15px;
 
-    border-radius: 50%;
-  }
-  .facebook {
-    background-color: #3b5997;
-  }
-  .twitter {
-    background-color: #3ec2f3;
-  }
-  .google {
-    background-color: #e44c41;
-  }
-}
 

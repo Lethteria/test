@@ -7,33 +7,18 @@
     });
 
     //----------Плавный переход по ссылкам------------//
-    /*$('#menu').find('.navbar-nav a').click(function(e){
+    $('#menu').find('.a').click(function(e){
         e.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1000);
     });
-    //-----------header-strip-----------//
-    setTimeout("$('.header-title').find('h1').addClass('strip-faid-in')", 2000);
-    //--------------animate stock!!!!!!!!!!!!!!!!!!!!-----//
-    var pos = $('.stock-animation').offset().top-$(window).height();
-    $(window).scroll(function(){
-        if ($(window).scrollTop() >= pos){
-            var index = 1;
-            setInterval(function () {
-                if (index<=5){
-                    $('#stock-img'+index).addClass('stock-show');
-                    index++;
-                } else {
-                    index == 1;
-                }
-            }, 500);
-        }
-    });
+
+
 
 
     //----------menu------------//
-    $('#gamburger').click(function(){
+   /* $('#gamburger').click(function(){
         var $this = $(this);
         $this.parents('nav').toggleClass('nav-open');
         $this.children().toggleClass('icon-bar-close');

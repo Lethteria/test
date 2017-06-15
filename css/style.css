@@ -1,12 +1,96 @@
+footer {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background: url("footer-backgr.jpg") center no-repeat;
+  background-size: cover; }
+  footer form input, footer form textarea {
+    padding: 15px 0 15px 20px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #c1c1c1; }
+  footer form input, footer form textarea, footer form button {
+    float: right;
+    font-family: 'Open-sans Regular';
+    border-radius: 5px; }
+  footer form input {
+    width: 48%; }
+    footer form input:nth-child(2) {
+      margin-right: 4%; }
+  footer form textarea {
+    width: 100%; }
+  footer form button {
+    padding: 15px 50px;
+    font-size: 22px;
+    color: #fff;
+    background-color: #49cbcd;
+    transition: all 0.5s ease-out; }
+    footer form button:hover {
+      cursor: pointer;
+      color: #49cbcd;
+      background-color: #fff;
+      transition: all 0.5s ease-out; }
+
+.footer-title {
+  margin-bottom: 7%;
+  text-align: center;
+  font-size: 42px;
+  color: #fff; }
+
+.footer-contact {
+  color: #909090; }
+  .footer-contact h5 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #fff; }
+  .footer-contact h5 + p {
+    width: 80%; }
+
+.footer-contact-tel, .footer-contact-mail {
+  display: block;
+  font-family: 'MyriadPro Regular';
+  color: #bface2; }
+
+.footer-social-net {
+  margin-top: 35px;
+  margin-bottom: 20px; }
+  .footer-social-net .social-icon {
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+    border-radius: 50%; }
+    .footer-social-net .social-icon a {
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+      text-align: center; }
+      .footer-social-net .social-icon a:before {
+        font-family: 'fontello';
+        display: inline-block;
+        font-size: 20px;
+        line-height: 45px;
+        font-variant: normal;
+        text-transform: none;
+        color: #ffffff; }
+  .footer-social-net .facebook {
+    background-color: #3b5997; }
+    .footer-social-net .facebook a:before {
+      content: '\e802'; }
+  .footer-social-net .twitter {
+    background-color: #3ec2f3; }
+    .footer-social-net .twitter a:before {
+      content: '\e800'; }
+  .footer-social-net .google {
+    background-color: #e44c41; }
+    .footer-social-net .google a:before {
+      content: '\e801'; }
+
 @charset "UTF-8";
 * {
   /*Сброс стилей*/
   margin: 0;
   padding: 0;
   font-weight: inherit;
-  font-family: inherit;
   font-style: inherit;
-  font-size: 100%;
   border: 0 none;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -26,6 +110,34 @@ img {
 
 header, footer, section, article, nav {
   display: block; }
+
+@font-face {
+  font-family: 'Open-sans Regular';
+  src: url("../fonts/OpenSans/opensans-regular.woff2") format("woff2"), url("../fonts/OpenSans/opensans-regular.woff") format("woff"), url("../fonts/OpenSans/OpenSans-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Open-sans Semibold';
+  src: url("../fonts/OpenSans/opensans-semibold.woff2") format("woff2"), url("../fonts/OpenSans/opensans-semibold.woff") format("woff"), url("../fonts/OpenSans/OpenSans-Semibold.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'MyriadPro Regular';
+  src: url("../fonts/MyriadPro/MyriadPro-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/fontello/fontello.eot") format("eot"), url("../fonts/fontello/fontello.woff2") format("woff2"), url("../fonts/fontello/fontello.woff") format("woff"), url("../fonts/fontello/fontello.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  font-family: 'Open-sans Regular';
+  font-size: 14px; }
 
 /*---------------------------С------------------*/
 .clearfix:after, .row:after {
@@ -160,20 +272,37 @@ header, footer, section, article, nav {
     width: 1170px; } }
 
 header {
-  padding-top: 25px;
-  background-color: #fff; }
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #fff;
+  z-index: 10; }
 
 .header-logo {
-  float: left; }
+  float: left;
+  line-height: 100px; }
+  .header-logo img {
+    vertical-align: middle; }
 
 nav {
-  float: right; }
+  float: right;
+  font-size: 15px; }
   nav li {
-    padding: 0 20px; }
+    padding: 40px 20px; }
+    nav li:hover {
+      cursor: pointer;
+      background-color: #f8f9fb;
+      transition: color 2s ease-out; }
+    nav li:hover a {
+      color: #49cbcd;
+      transition: color 0.5s ease-out; }
     nav li a {
-      color: #484c55; }
+      color: #484c55;
+      transition: color 0.5s ease-out; }
 
 .slider {
+  padding-top: 100px;
+  position: relative;
   background-color: #49cbcd; }
   .slider img {
     width: 100%;
@@ -190,17 +319,33 @@ nav {
     right: 0;
     left: 0;
     bottom: 0;
-    width: 50%;
+    width: 75%;
     height: 50%;
     margin: 0 auto;
     text-align: center;
     color: #fff; }
+    .slider .slider-description .item-title {
+      margin-bottom: 20px;
+      font-family: 'Open-sans Semibold';
+      font-size: 63px; }
+    .slider .slider-description p {
+      width: 50%;
+      margin: 0 auto 50px;
+      font-size: 23px; }
+    .slider .slider-description .slider-item-button {
+      font-family: 'Open-sans Semibold';
+      font-size: 26px; }
   .slider .slider-item-button {
     display: inline-block;
     padding: 10px 20px;
     border: 2px solid #ffffff;
     border-radius: 5px;
-    color: #fff; }
+    color: #fff;
+    transition: all 1s ease-out; }
+    .slider .slider-item-button:hover {
+      color: #207576;
+      border-color: #207576;
+      transition: all 1s ease-out; }
 
 .team {
   padding-top: 5%;
@@ -208,7 +353,8 @@ nav {
   text-align: center;
   color: #4e525d; }
   .team .team-title {
-    margin-bottom: 5%; }
+    margin-bottom: 10%;
+    font-size: 42px; }
   .team .co-worker-foto {
     margin-left: auto;
     margin-right: auto;
@@ -217,6 +363,8 @@ nav {
     height: 201px;
     background-color: #eeeef0;
     border-radius: 50%; }
+  .team .co-worker-name {
+    font-size: 22px; }
   .team .co-worker-about {
     margin-top: 5%; }
 
@@ -232,11 +380,13 @@ nav {
   .tariff-plans-item .item-header {
     padding-top: 20px;
     padding-bottom: 20px;
+    font-size: 26px;
     color: #fff;
     background-color: #485460; }
   .tariff-plans-item .item-coast {
     padding-top: 20px;
     padding-bottom: 20px;
+    font-size: 20px;
     color: #485460; }
   .tariff-plans-item p {
     padding-top: 10px;
@@ -248,57 +398,19 @@ nav {
     margin-top: 25px;
     margin-bottom: 25px;
     padding: 10px 50px;
+    font-family: 'Open-sans Semibold';
+    font-size: 17px;
     color: #fff;
     background-color: #8c9299;
-    border-radius: 5px; }
-
-footer {
-  padding-top: 5%;
-  padding-bottom: 5%;
-  background: url("footer-backgr.jpg") center no-repeat;
-  background-size: cover; }
-  footer form input, footer form textarea {
-    padding: 15px 0 15px 20px;
-    margin-bottom: 30px; }
-  footer form input, footer form textarea, footer form button {
-    float: right;
-    border-radius: 5px; }
-  footer form input {
-    width: 48%; }
-    footer form input:nth-child(2) {
-      margin-right: 4%; }
-  footer form textarea {
-    width: 100%; }
-  footer form button {
-    padding: 15px 50px;
-    color: #fff;
-    background-color: #49cbcd; }
-
-.footer-title {
-  margin-bottom: 5%;
-  text-align: center;
-  color: #fff; }
-
-.footer-contact {
-  color: #909090; }
-  .footer-contact h5 {
-    color: #fff; }
-
-.footer-contact-tel, .footer-contact-mail {
-  display: block;
-  color: #bface2; }
-
-.footer-social-net .social-icon {
-  width: 45px;
-  height: 45px;
-  margin-right: 15px;
-  border-radius: 50%; }
-
-.footer-social-net .facebook {
-  background-color: #3b5997; }
-
-.footer-social-net .twitter {
-  background-color: #3ec2f3; }
-
-.footer-social-net .google {
-  background-color: #e44c41; }
+    border-radius: 5px;
+    transition: background-color 0.5s ease-out; }
+    .tariff-plans-item .item-buy:hover {
+      cursor: pointer;
+      background-color: #49cbcd;
+      transition: background-color 0.5s ease-out; }
+    .tariff-plans-item .item-buy .tariff-hover {
+      transition: background-color 0.5s ease-out; }
+      .tariff-plans-item .item-buy .tariff-hover:hover {
+        cursor: pointer;
+        background-color: #49cbcd;
+        transition: background-color 0.5s ease-out; }
