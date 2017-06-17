@@ -1,4 +1,4 @@
-* {             /*Сброс стилей*/
+* {
   margin: 0;
   padding: 0;
   font-weight: inherit;
@@ -9,8 +9,11 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  outline-style: none;
 }
-
+button {
+  text-align: center;
+}
 ul {
   li {
     list-style: none;
@@ -28,7 +31,7 @@ img {
   border: none;
 }
 
-header, footer, section, article, nav {
+header, footer, section, article, nav{
   display: block;
 }
 
@@ -56,10 +59,10 @@ header, footer, section, article, nav {
 }
 @font-face {
   font-family: 'fontello';
-  src: url('../fonts/fontello/fontello.eot') format('eot'),
-  url('../fonts/fontello/fontello.woff2') format('woff2'),
-  url('../fonts/fontello/fontello.woff') format('woff'),
-  url('../fonts/fontello/fontello.ttf') format('truetype');
+  src: url('../fonts/fontello/font/fontello.eot') format('eot'),
+  url('../fonts/fontello/font/fontello.woff2') format('woff2'),
+  url('../fonts/fontello/font/fontello.woff') format('woff'),
+  url('../fonts/fontello/font/fontello.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -67,7 +70,7 @@ body {
   font-family: 'Open-sans Regular';
   font-size: 14px;
 }
-/*---------------------------С------------------*/
+
 .clearfix, .row {
   &:after  {
     content: '';
@@ -79,8 +82,12 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 .row {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
   .col {
     float: left;
     box-sizing: border-box;
@@ -139,24 +146,10 @@ body {
     }
   }
 
-
-/*.col.xl1 {width: 8.333333333333333%;}
-.col.xl2 {width: 16.66666666666667%;}
-.col.xl3 {width: 25%;}
-.col.xl4 {width: 33.33333333333333%;}
-.col.xl5 {width: 41.66666666666667%;}
-.col.xl6 {width: 50%;}
-.col.xl7 {width: 58.33333333333333%;}
-.col.xl8 {width: 66.66666666666667%;}
-.col.xl9 {width: 75%;}
-.col.xl10 {width: 83.33333333333333%;}
-.col.xl11 {width: 91.66666666666667%;}
-.col.xl12 {width: 100%;}*/
-
 @media only screen and (min-width: 601px) {
-  .container {
+  /*.container {
     width: 85%;
-  }
+  }*/
   .row {
       .m1 {
         width: 8.333333333333333%;
@@ -212,9 +205,9 @@ body {
 }
 
 @media only screen and (min-width: 993px) {
-  .container {
+  /*.container {
     width: 80%;
-  }
+  }*/
 
   .row {
     .l1 {
@@ -231,7 +224,7 @@ body {
       @extend .l1;
       width: 25%;
     }
-    .xl4 {
+    .l4 {
       @extend .l1;
       width: 33.33333333333333%;
     }
@@ -271,6 +264,7 @@ body {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    //width: 1170px;
+    width: 1200px;
   }
 }

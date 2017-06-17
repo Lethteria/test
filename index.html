@@ -13,33 +13,29 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="container clearfix">
 
             <a href="#!" class="header-logo">
                 <img src="../img/logo.png" alt="Логотип"/>
             </a>
+            <div class="menu-icon">
+                <span id="gamburger"></span>
+            </div>
 
-            <nav id="#menu">
-                <span class="menu-icon"></span>
+            <nav id="menu">
                 <ul class="clearfix">
                     <li>
-                        <a href="#!">Home</a>
+                        <a href="#home">Home</a>
                     </li>
                     <li>
-                        <a href="#!">Service</a>
+                        <a href="#our-team">Team</a>
                     </li>
                     <li>
-                        <a href="#!">Portfolio</a>
+                        <a href="#our-servece">Service</a>
                     </li>
                     <li>
-                        <a href="#!">Team</a>
-                    </li>
-                    <li>
-                        <a href="#!">Blog</a>
-                    </li>
-                    <li>
-                        <a href="#!">Contact</a>
+                        <a href="#our-contact">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -47,7 +43,7 @@
         </div>
     </header>
 
-    <section class="slider">
+    <section class="slider" id="home">
         <div class="single-item">
             <div class="slider-item">
                 <img src="../img/slider-img.jpg" alt=""/>
@@ -67,12 +63,12 @@
 
     </section>
 
-    <section class="team">
+    <section class="team" id="our-team">
         <div class="container">
             <h2 class="team-title">The Team</h2>
 
             <div class="row">
-                <div class="col xl3 l3 m6 s12">
+                <div class="col l3 m6 s12">
                     <div class="team-co-worker">
                         <div class="co-worker-foto"></div>
                         <h5 class="co-worker-name">Adrian Thomas</h5>
@@ -83,7 +79,7 @@
                     </div>
                 </div>
 
-                <div class="col xl3 l3 m6 s12">
+                <div class="col l3 m6 s12">
                     <div class="team-co-worker">
                         <div class="co-worker-foto"></div>
                         <h5 class="co-worker-name">Adrian Thomas</h5>
@@ -94,7 +90,7 @@
                     </div>
                 </div>
 
-                <div class="col xl3 l3 m6 s12">
+                <div class="col l3 m6 s12">
                     <div class="team-co-worker">
                         <div class="co-worker-foto"></div>
                         <h5 class="co-worker-name">Adrian Thomas</h5>
@@ -105,7 +101,7 @@
                     </div>
                 </div>
 
-                <div class="col xl3 l3 m6 s12">
+                <div class="col l3 m6 s12">
                     <div class="team-co-worker">
                         <div class="co-worker-foto"></div>
                         <h5 class="co-worker-name">Adrian Thomas</h5>
@@ -119,10 +115,10 @@
         </div>
     </section>
 
-    <section class="tariff-plans">
+    <section class="tariff-plans" id="our-servece">
         <div class="container">
             <div class="row">
-                <div class="col xl4 l4 m12 s12">
+                <div class="col l4 m12 s12">
                     <div class="tariff-plans-item">
                         <h4 class="item-header">Basic</h4>
 
@@ -139,7 +135,7 @@
                     </div>
                 </div>
 
-                <div class="col xl4 l4 m12 s12">
+                <div class="col l4 m12 s12">
                     <div class="tariff-plans-item">
                         <h4 class="item-header">Basic</h4>
 
@@ -156,7 +152,7 @@
                     </div>
                 </div>
 
-                <div class="col xl4 l4 m12 s12">
+                <div class="col l4 m12 s12">
                     <div class="tariff-plans-item">
                         <h4 class="item-header">Basic</h4>
 
@@ -176,12 +172,12 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="our-contact">
         <div class="container">
             <h2 class="footer-title">Contact Us</h2>
 
             <div class="row">
-                <div class="col xl6 l6 m12 s12">
+                <div class="col l6 m12 s12">
 
                     <div class="footer-contact">
                         <h5>Get in touch with us</h5>
@@ -190,27 +186,40 @@
                         </p>
 
                         <ul class="footer-social-net clearfix">
-                            <li class="social-icon facebook"><a href=""></a></li>
-                            <li class="social-icon twitter"><a href=""></a></li>
-                            <li class="social-icon google"><a href=""></a></li>
+                            <li class="social-icon facebook"><a href="#!"></a></li>
+                            <li class="social-icon twitter"><a href="#!"></a></li>
+                            <li class="social-icon google"><a href="#!"></a></li>
                         </ul>
-                        <p>Posted by Dospel & GanjaParker</p>
 
-                        <a href="tel:" class="footer-contact-tel">+XX-XXXX - XXXX - XX</a>
-
-                        <span class="footer-contact-mail">info@mail.com</span>
-
+                        <address>
+                            <span>Posted by Dospel & GanjaParker</span>
+                            <a href="tel:" class="footer-contact-tel">+XX-XXXX - XXXX - XX</a>
+                            <span class="footer-contact-mail">info@mail.com</span>
+                        </address>
                     </div>
 
                 </div>
 
-                <div class="col xl6 l6 m12 s12">
-                    <form action="" class="clearfix">
-                        <div class="clearfix">
-                            <input type="email" placeholder="Email">
-                            <input type="text" placeholder="Name">
+                <div class="col l6 m12 s12">
+                    <form action="" id="" class="clearfix">
+
+                        <div class="row">
+                            <div class="col l6 m6 s12">
+                                <div class="form-item">
+                                    <input type="text" class="valid-item" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col l6 m6 s12">
+                                <div class="form-item">
+                                    <input type="email" class="valid-item" placeholder="Email">
+                                </div>
+                            </div>
                         </div>
-                        <textarea  id="" cols="30" rows="10" placeholder="Message "></textarea>
+
+                        <div class="form-item">
+                            <textarea  cols="30" rows="7" class="valid-item" placeholder="Message "></textarea>
+                        </div>
+
                         <button type="submit">Send</button>
                     </form>
                 </div>
@@ -218,8 +227,10 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
 
     <script type="text/javascript" src="js/myJs.js"></script>

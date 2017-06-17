@@ -1,34 +1,41 @@
 $aquamarine-color: #49cbcd;
 footer {
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 90px;
+  padding-bottom: 100px;
   background: url("footer-backgr.jpg") center no-repeat;
   background-size: cover;
 
   form {
     input, textarea {
-      padding: 15px 0 15px 20px;
+      padding: 10px 0 10px 20px;
       margin-bottom: 30px;
+      width: 100%;
       font-size: 16px;
+      color: #4e525d;
+      background-color: #fff;
+      &:focus {
+        box-shadow: inset 0 0 1px 1px $aquamarine-color;
+      }
+    }
+    ::-webkit-input-placeholder {
       color: #c1c1c1;
     }
-    input, textarea, button {
+    :-moz-placeholder {
+      color: #c1c1c1;
+    }
+    ::-moz-placeholder {
+      color: #c1c1c1;
+    }
+    textarea, button{
       float: right;
+    }
+    input, textarea, button {
+      display: block;
       font-family: 'Open-sans Regular';
       border-radius: 5px;
     }
-    input {
-      width: 48%;
-      &:nth-child(2) {
-        margin-right: 4%;
-      }
-    }
-    textarea {
-      width: 100%;
-    }
     button {
-      //display: block;
-      padding: 15px 50px;
+      padding: 10px 60px;
       font-size: 22px;
       color: #fff;
       background-color: $aquamarine-color;
@@ -41,11 +48,35 @@ footer {
         transition: all 0.5s ease-out;
       }
     }
+    .form-item {
+      position: relative;
+    }
+    .has-error {
+      input, textarea {
+        box-shadow: inset 0 0 1px 1px #9c1212;
+      }
+    }
+    .form-icon {
+      position: absolute;
+      right: 10px;
+      top: 0;
+    }
+    .form-icon:before {
+      font-family: 'fontello';
+      display: inline-block;
+
+      font-size: 20px;
+      line-height: 42px;
+      font-variant: normal;
+    }
+    .error:before {
+      content: '\f12a';
+      color: #9c1212;
+    }
   }
 }
 .footer-title {
-  //padding-top: 5%;
-  margin-bottom: 7%;
+  margin-bottom: 100px;
 
   text-align: center;
   font-size: 42px;
@@ -53,7 +84,7 @@ footer {
 }
 .footer-contact {
   h5 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 24px;
     color: #fff;
   }
@@ -62,17 +93,26 @@ footer {
   }
   color: #909090;
 }
-.footer-contact-tel, .footer-contact-mail {
-  display: block;
+address, .footer-contact-tel{
   font-family: 'MyriadPro Regular';
   color: #bface2;
 }
+address {
+  span {
+    display: block;
+  }
+  .footer-contact-tel {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
 .footer-social-net {
-  margin-top: 35px;
-  margin-bottom: 20px;
+  margin-top: 41px;
+  margin-bottom: 17px;
   .social-icon {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
     margin-right: 15px;
 
     border-radius: 50%;
@@ -90,7 +130,6 @@ footer {
         font-size: 20px;
         line-height: 45px;
         font-variant: normal;
-        text-transform: none;
         color: #ffffff;
       }
     }

@@ -7,13 +7,24 @@
     });
 
     //----------Плавный переход по ссылкам------------//
-    $('#menu').find('.a').click(function(e){
+    $('#menu').find('a').click(function(e){
         e.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1000);
     });
 
+    //-----------Фиксированный header---//
+    $(window).scroll(function(){
+        var header = $('#header')
+        header.addClass('header-fixed');
+        header.next().addClass('slider-padding-top');
+    })
+
+    //----------item-buy hover----//
+    $('.item-buy').hover(function(){
+        $(this).parent().find('.item-header').toggleClass('header-aqua');
+    });
 
 
 
@@ -22,37 +33,28 @@
         var $this = $(this);
         $this.parents('nav').toggleClass('nav-open');
         $this.children().toggleClass('icon-bar-close');
-    });
+    });*/
     //----------валидация------------//
-    var modalRemove = function(){
-        var $this = $(this);
-        $this.css('display','none');
-        $this.after('<div class="text-center submit-info"> <p>Ваша заявка отправлена</p> <p>Спасибо за заказ</p> <button type="button" class="close btn" data-dismiss="modal" aria-hidden="true">Закрыть</button> </div>');
-    }
     var myValidate=function(){
 
-        $('.form-group',this).each(function(){
+        $('.form-item',this).each(function(){
             var $this = $(this);
             if($('.valid-item',this).val() == ''){
-                $this.addClass('has-error has-feedback');
-                $this.find('.valid-item').after('<span class="fa-icon fa-exclamation form-control-feedback"></span>');
+                $this.addClass('has-error');
+                $this.find('.valid-item').after('<span class="form-icon error"></span>');
             } else {
                 $this.removeClass('has-error');
-                $this.find('span').remove('.form-control-feedback');
+                $this.find('span').remove('.error');
             }
         });
     };
-    $('form').submit(function(){
+    $('form').submit(function(e){
         myValidate.call(this);
-        if ( $('.form-group',this).hasClass('has-error') ){
+        if ( $('.form-item',this).hasClass('has-error') ){
             return false;
         } else {
-            if ($(this).parent().hasClass('modal-body')){
-                modalRemove.call(this);
-            } else {
-                $('#sendModal').modal('show');
-            }
-
+            $('.valid-item',this).val("");
+            e.preventDefault();
         }
-    });*/
+    });
 });
