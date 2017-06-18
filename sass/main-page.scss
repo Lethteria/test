@@ -24,7 +24,7 @@ $aquamarine-color: #49cbcd;
   }
   .slick-prev {
     left: 25px;
-    z-index: 10;
+    z-index: 9;
     &:before {
       content: '\e804';
     }
@@ -88,14 +88,13 @@ $aquamarine-color: #49cbcd;
       margin: 0 auto 62px;
       font-size: 23px;
     }
-    .slider-item-button {
-      font-family: 'Open-sans Semibold';
-      font-size: 26px;
-    }
   }
   .slider-item-button {
     display: inline-block;
     padding: 14px 40px;
+
+    font-family: 'Open-sans Semibold';
+    font-size: 26px;
 
     border: 3px solid #ffffff;
     border-radius: 5px;
@@ -181,6 +180,7 @@ $aquamarine-color: #49cbcd;
 
     font-size: 20px;
     color: #485460;
+    background-color: transparent;
   }
   p {
     padding-top: 13px;
@@ -215,6 +215,217 @@ $aquamarine-color: #49cbcd;
         background-color: $aquamarine-color;
         transition:  background-color 0.5s ease-out;
       }
+    }
+  }
+}
+@media (max-width: 1230px){
+  .slider-padding-top {
+    padding-top: 70px;
+  }
+  .slider {
+    .slider-description {
+      .item-title {
+        margin-bottom: 2%;
+        font-size: 36px;
+      }
+      p {
+        margin-bottom: 5%;
+        font-size: 18px;
+      }
+    }
+    .slider-item-button {
+      font-size: 22px;
+      padding: 10px 25px;
+      border-width: 2px;
+    }
+    .slick-arrow {
+      width: 30px;
+      height: 30px;
+    }
+    .slick-prev, .slick-next {
+      &:before {
+        font-size: 20px;
+      }
+    }
+  }
+  .team {
+    padding-top: 50px;
+    padding-bottom: 70px;
+    .team-title {
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
+    .co-worker-foto {
+      margin-bottom: 15%;
+      width: 150px;
+      height: 150px;
+      &:hover:before {
+        line-height: 150px;
+      }
+    }
+    .co-worker-name {
+      font-size: 18px;
+    }
+  }
+  .tariff-plans {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    .item-header {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 20px;
+    }
+    .item-coast {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-size: 16px;
+    }
+    .item-buy {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 992px){
+  .slider-padding-top {
+    //padding-top: 70px;
+  }
+  .slider {
+    .slider-description {
+      .item-title {
+        font-size: 24px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    .slider-item-button {
+      font-size: 16px;
+      padding: 5px 25px;
+    }
+  }
+  .team {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .team-title {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+    .team-co-worker {
+      margin-bottom: 20px;
+    }
+    .co-worker-foto {
+      margin-bottom: 5%;
+    }
+    .co-worker-name {
+      font-size: 18px;
+    }
+  }
+  .tariff-plans {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    .item-header {
+      font-size: 18px;
+    }
+    .item-coast {
+      font-size: 15px;
+    }
+    .item-buy {
+      font-size: 15px;
+    }
+  }
+  .tariff-plans-item {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+    p {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 600px){
+  .slider-padding-top {
+    padding-top: 50px;
+  }
+  .slider {
+    .slider-description {
+      .item-title {
+        font-size: 18px;
+      }
+      p {
+        width: 50%;
+        font-size: 15px;
+      }
+    }
+    .slider-item-button {
+      font-size: 14px;
+    }
+  }
+  .team {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .team-title {
+      font-size: 16px;
+    }
+    .co-worker-foto {
+      width: 100px;
+      height: 100px;
+      &:hover:before {
+        line-height: 100px;
+        font-size: 20px;
+      }
+    }
+    .co-worker-foto {
+      margin-bottom: 3%;
+    }
+    .co-worker-name {
+      font-size: 15px;
+    }
+    .co-worker-about {
+      width: 90%;
+      margin-top: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    .col:last-child .co-worker-about{
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+  .tariff-plans {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    .item-header {
+      font-size: 16px;
+    }
+  }
+  .tariff-plans-item {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+}
+@media (max-width: 480px){
+  .slider {
+    .slider-description {
+      top: 10%;
+      p {
+        width: 80%;
+        font-size: 14px;
+      }
+    }
+    .slider-item-button {
+      padding-top: 3px;
+      padding-bottom: 3px;
+      font-size: 14px;
+      border-width: 1px;
+    }
+    .slick-arrow {
+      z-index: -1;
     }
   }
 }

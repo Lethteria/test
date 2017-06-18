@@ -7,7 +7,10 @@
     });
 
     //----------Плавный переход по ссылкам------------//
-    $('#menu').find('a').click(function(e){
+    var menu = $('#menu'),
+        gamburger = $('#gamburger');
+
+    menu.find('a').click(function(e){
         e.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
@@ -19,21 +22,27 @@
         var header = $('#header')
         header.addClass('header-fixed');
         header.next().addClass('slider-padding-top');
-    })
+    });
 
     //----------item-buy hover----//
     $('.item-buy').hover(function(){
         $(this).parent().find('.item-header').toggleClass('header-aqua');
     });
 
-
-
     //----------menu------------//
-   /* $('#gamburger').click(function(){
-        var $this = $(this);
-        $this.parents('nav').toggleClass('nav-open');
-        $this.children().toggleClass('icon-bar-close');
-    });*/
+    if( $(window).width() <= '992' ){
+        menu.addClass('navbar-collapse');
+        gamburger.addClass('visible');
+        gamburger.click(function(){
+            $(this).children().toggleClass('menu-icon-close');
+            if (menu.hasClass('nav-open')){
+                menu.slideUp().removeClass('nav-open');
+            } else {
+                menu.slideDown().addClass('nav-open');
+            }
+        });
+    }
+
     //----------валидация------------//
     var myValidate=function(){
 

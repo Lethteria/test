@@ -1,10 +1,7 @@
 header {
   background-color: #fff;
-  .menu-icon {
-    width: 50px;
-    display: none;
-    float: right;
-    color: #00262c;
+  .container {
+    position: relative;
   }
 }
 .header-logo {
@@ -53,18 +50,84 @@ nav {
     }
   }
 }
+#gamburger {
+  width: 42px;
+  display: none;
+  float: right;
+  padding: 10px;
+  margin-top: 18px;
 
+  color: #00262c;
+  background-color: #49cdcd;
+  &:hover {
+    cursor: pointer;
+  }
+}
+#gamburger.visible {
+  display: block;
+}
 .navbar-collapse {
+  z-index: 100;
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  top: 70px;
   width: 100%;
+  left: 0;
+
+  border-top: 1px solid #3ba7a7;
   ul {
     display: block;
     li {
       display: block;
       float: none;
       a {
-        padding: 5px 10px;
+        padding: 5px 15px;
       }
     }
+  }
+}
+.menu-icon {
+  position: relative;
+  margin-top: 6px;
+  margin-bottom: 6px;
+
+  background-color: #ffffff;
+
+  transition-property: background-color, transform;
+  transition-duration: 0.3s;
+
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  &:before,&:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 22px;
+    height: 2px;
+
+    background-color: #ffffff;
+    border-radius: 1px;
+
+    transition-property: background-color, transform;
+    transition-duration: 0.3s;
+  }
+  &:before {
+     top: -6px;
+   }
+  &:after {
+    bottom: -6px;
+  }
+}
+.menu-icon-close {
+  background-color: transparent;
+  &:before {
+    transform: translateY(6px) rotate(37deg);
+  }
+  &:after {
+    transform: translateY(-6px) rotate(-37deg);
   }
 }
 .header-fixed {
@@ -72,4 +135,36 @@ nav {
   width: 100%;
   top: 0;
   z-index: 10;
+}
+@media (max-width: 1230px){
+  .header-logo {
+    line-height: 70px;
+  }
+  nav {
+    li {
+      a {
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+    }
+  }
+}
+@media (max-width: 600px){
+  .header-logo {
+    line-height: 50px;
+  }
+  #gamburger {
+    margin-top: 8px;
+  }
+  .navbar-collapse {
+  top: 50px;
+  }
+}
+@media (max-width: 480px){
+  .header-logo {
+    img {
+      width: 60%;
+    }
+  }
+
 }
