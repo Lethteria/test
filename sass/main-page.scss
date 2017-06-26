@@ -1,9 +1,7 @@
 $aquamarine-color: #49cbcd;
-.slider-padding-top {
-  padding-top: 100px;
-}
 .slider {
   position: relative;
+  padding-top: 100px;
   background-color: $aquamarine-color;
 
   img {
@@ -219,10 +217,8 @@ $aquamarine-color: #49cbcd;
   }
 }
 @media (max-width: 1230px){
-  .slider-padding-top {
-    padding-top: 70px;
-  }
   .slider {
+    padding-top: 70px;
     .slider-description {
       .item-title {
         margin-bottom: 2%;
@@ -288,9 +284,6 @@ $aquamarine-color: #49cbcd;
 }
 
 @media (max-width: 992px){
-  .slider-padding-top {
-    //padding-top: 70px;
-  }
   .slider {
     .slider-description {
       .item-title {
@@ -347,10 +340,8 @@ $aquamarine-color: #49cbcd;
 }
 
 @media (max-width: 600px){
-  .slider-padding-top {
-    padding-top: 50px;
-  }
   .slider {
+    padding-top: 50px;
     .slider-description {
       .item-title {
         font-size: 18px;

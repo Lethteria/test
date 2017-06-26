@@ -2,9 +2,7 @@
   margin: 0;
   padding: 0;
   font-weight: inherit;
-  //font-family: inherit;
   font-style: inherit;
-  //font-size: 100%;
   border: 0 none;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -147,9 +145,6 @@ body {
   }
 
 @media (min-width: 601px) {
-  /*.container {
-    width: 85%;
-  }*/
   .row {
       .m1 {
         width: 8.333333333333333%;
@@ -205,10 +200,6 @@ body {
 }
 
 @media (min-width: 993px) {
-  /*.container {
-    width: 80%;
-  }*/
-
   .row {
     .l1 {
       width: 8.333333333333333%;
@@ -261,10 +252,12 @@ body {
       width: 100%;
     }
   }
+  .navbar-collapse {
+    display:block!important;
+  }
 }
 @media (min-width: 1230px) {
   .container {
-    //width: 1170px;
     width: 1200px;
   }
 }
